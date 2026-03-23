@@ -1,0 +1,19 @@
+# p2b_snake_sing/pyproject.toml
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["snake"]
+namespaces = true
+
+[project]
+name = "snake-sing"
+version = "1.0.0"
+description = "A fun way to display a singing snake."
+authors = [{ name = "Surya Akasam", email = "surya.akasam@outlook.com" }]
+
+# Install this package as editable using the following command
+# python -m pip install -e .
