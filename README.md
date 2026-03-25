@@ -1,6 +1,6 @@
 PyRef/README.md
 
-# PyRef: Python Programming Language Reference
+# PyRef: Python Reference
 
 PyRef is a Python learning quick reference, organized into modules covering the fundamentals to advanced topics.
 
