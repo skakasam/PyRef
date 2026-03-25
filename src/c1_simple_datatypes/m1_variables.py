@@ -1,6 +1,5 @@
 """Python Variables Practice Module"""
 
-from itertools import count
 from typing import Dict
 
 ################################################################################
@@ -25,7 +24,11 @@ print(PI)  # Prints 3.14159
 MAX_CONNECTIONS: int = 100
 print(MAX_CONNECTIONS)  # Prints 100
 
-ORGANIZATION_INFO: Dict[str, str] = {"name": "Novus Skills", "course": "Python"}
+ORGANIZATION_INFO: Dict[str, str] = {
+    "name": "John",
+    "age": "32",
+    "occupation": "Programmer",
+}
 print(ORGANIZATION_INFO)
 
 #################################################################################
@@ -47,11 +50,11 @@ def fun(required, *args, **kwargs):
     print(f"  Kwargs  : {kwargs}")
 
 
-name = "Surya Akasam"
-age = 38
+name = "John Doe"
+age = 32
 occupation = "Engineer"
-city = "Milton"
-country = "Canada"
+city = "Los Angeles"
+country = "USA"
 
 # *args and **kwargs
 print("\n")
@@ -76,7 +79,9 @@ packed_2 = name, age, occupation, city, country
 print("Packed Tuple 2:", packed_2)
 
 # Unpacking values from a tuple
-unpacked_name, unpacked_age, unpacked_occupation, unpacked_city, unpacked_country = packed
+unpacked_name, unpacked_age, unpacked_occupation, unpacked_city, unpacked_country = (
+    packed
+)
 print(
     "Unpacked Tuple:",
     unpacked_name,
@@ -95,7 +100,9 @@ packed_list = [name, age, occupation, city, country]
 print("Packed List:", packed_list)
 
 # Unpacking values from a list
-unpacked_name, unpacked_age, unpacked_occupation, unpacked_city, unpacked_country = packed_list
+unpacked_name, unpacked_age, unpacked_occupation, unpacked_city, unpacked_country = (
+    packed_list
+)
 print(
     "Unpacked List:",
     unpacked_name,
@@ -137,7 +144,9 @@ packed_set = {name, age, occupation, city, country}
 print("Packed Set:", packed_set)
 
 # Unpacking values from a set
-unpacked_name, unpacked_age, unpacked_occupation, unpacked_city, unpacked_country = packed_set
+unpacked_name, unpacked_age, unpacked_occupation, unpacked_city, unpacked_country = (
+    packed_set
+)
 print(
     "Unpacked Set:",
     unpacked_name,
