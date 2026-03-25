@@ -15,7 +15,9 @@ print("--> FUNCTION DECORATORS <--")
 
 
 # Decorator with parameters
-def styled(style: str = "none") -> Callable[[Callable[[Any], str]], Callable[[Any], str]]:
+def styled(
+    style: str = "none",
+) -> Callable[[Callable[[Any], str]], Callable[[Any], str]]:
     STYLES_XREF = {
         "none": "\033[0m",
         "bold": "\033[1m",
@@ -25,7 +27,9 @@ def styled(style: str = "none") -> Callable[[Callable[[Any], str]], Callable[[An
     }
 
     if style not in STYLES_XREF:
-        raise ValueError("style must be one of none, bold, faint, italic, or underline.")
+        raise ValueError(
+            "style must be one of none, bold, faint, italic, or underline."
+        )
 
     def decorator(func: Callable[[Any], str]) -> Callable[[Any], str]:
         """Wrap the text created by func in a box"""
@@ -92,4 +96,4 @@ def greet(name: str) -> str:
 
 if __name__ == "__main__":
     # Call the decorated greet funtion
-    print(greet("Surya"))
+    print(greet("Python"))

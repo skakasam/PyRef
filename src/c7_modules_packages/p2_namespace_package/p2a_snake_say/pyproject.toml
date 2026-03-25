@@ -13,7 +13,6 @@ namespaces = true
 name = "snake-say"
 version = "1.0.0"
 description = "A fun way to display a text bubble with a snake."
-authors = [{ name = "Surya Akasam", email = "surya.akasam@outlook.com" }]
 
 # Install this package as editable using the following command
 # python -m pip install -e .

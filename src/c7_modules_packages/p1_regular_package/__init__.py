@@ -1,5 +1,11 @@
 """Python Package for Demonstrating Modules in Python"""
 
+from .m1_modules_in_python import (
+    UnsupportedLanguageError,
+    greet_user,
+    supported_languages,
+)
+
 print(f"Importing {__name__}")
 
 ################################################################################
@@ -16,13 +22,9 @@ print(f"Importing {__name__}")
 # Package Metadata
 ################################################################################
 __version__ = "1.0.0"
-__author__ = "Surya Akasam"
-__email__ = "surya.akasam@outlook.com"
 __description__ = "A package for demonstrating modules in Python."
 
 ################################################################################
 # Controlling the Package imports using __all__
 ################################################################################
-from .m1_modules_in_python import greet_user, supported_languages, UnsupportedLanguageError
-
 __all__ = ["greet_user", "supported_languages", "UnsupportedLanguageError"]
