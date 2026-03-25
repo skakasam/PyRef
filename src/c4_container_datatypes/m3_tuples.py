@@ -3,8 +3,6 @@
 ###############################################################################
 # Tuple Creation
 ###############################################################################
-from operator import le
-
 print("Tuple Creation Examples:")
 empty_tuple = ()
 print(f"  Empty Tuple: {empty_tuple}")
@@ -47,7 +45,7 @@ for fruit in fruits:
 # Tuple Methods
 ###############################################################################
 print("Tuple Methods Examples:")
-dell_laptop = "Dell Precision 5550 Laptop"
+dell_laptop = "Dell Precision 5570 Laptop"
 dell_monitor = "Dell Ultrasharp U2722D QHD Monitor"
 lenovo_laptop = "Lenovo ThinkPad X1 Carbon Laptop"
 lenovo_monitor = "Lenovo L27q-30 27-Inch QHD Monitor"

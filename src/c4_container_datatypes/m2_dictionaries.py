@@ -24,9 +24,9 @@ print(f"  Checklist: {checklist}")
 ###############################################################################
 print("Accessing Dictionary Elements Examples:")
 print(f"  Apple Count: {fruits['apple']}")
-# print(f"  Mango Count: {fruits['mango']}") Results in KeyError
 print(f"  Apple Count: {fruits.get('apple')}")
 print(f"  Mango Count: {fruits.get('mango')}")
+# print(f"  Mango Count: {fruits['mango']}") Results in KeyError
 print(f"  Mango Count (default 0): {fruits.get('mango', 0)}")
 print(f"  All Fruits: {fruits.keys()}")
 print(f"  All Counts: {fruits.values()}")
@@ -79,5 +79,6 @@ print(f"  Total Orders: {total_orders}")
 # It consists of an expression pair (key: value) followed by a for clause,
 # and can include optional if clauses.
 print("Dictionary Comprehension Examples:")
+fruits = {"apple": 1, "banana": 2, "cherry": 3}
 squared_fruits = {fruit: count**2 for fruit, count in fruits.items()}
 print(f"  Squared Fruits: {squared_fruits}")

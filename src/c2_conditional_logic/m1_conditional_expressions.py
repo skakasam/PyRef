@@ -9,14 +9,12 @@
 # 5. Greater Than or Equal To (>=)
 # 6. Less Than or Equal To    (<=)
 ###############################################################################
-from ast import Pass
-
 
 print("Comparison Operators:")
 print(f"    Is 5 == 2 ? {5 == 2}")
 print(f"    Is 2 != 5 ? {2 != 5}")
-print(f"    Is 5  > 2 ? {5  > 2}")
-print(f"    Is 5  < 2 ? {5  < 2}")
+print(f"    Is 5  > 2 ? {5 > 2}")
+print(f"    Is 5  < 2 ? {5 < 2}")
 print(f"    Is 5 >= 4 ? {5 >= 4}")
 print(f"    Is 5 <= 4 ? {5 <= 4}")
 
@@ -68,7 +66,9 @@ print("Identity Operators:")
 print(f"    Is dragon a person? {dragon is person}")
 print(f"    Is dragon an animal? {dragon is animal}")
 print(f"    Is dragon not a person? {dragon is not person}")
-print(f"    id(person) = {id(person)}, id(animal) = {id(animal)}, id(dragon) = {id(dragon)}")
+print(
+    f"    id(person) = {id(person)}, id(animal) = {id(animal)}, id(dragon) = {id(dragon)}"
+)
 
 
 ###############################################################################

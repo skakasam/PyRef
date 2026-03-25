@@ -34,8 +34,9 @@ print(ORGANIZATION_INFO)
 #################################################################################
 # Multiple assignment
 #################################################################################
-name, age, occupation = "John", 32, "Programmer"
-print(name, age, occupation)  # Prints John 32 Programmer
+name, age, cgpa = "John", 32, 3.8
+print(f"Name: {name}, Age: {age}, CGPA: {cgpa}")
+print(f"{type(name)=}, {type(age)=}, {type(cgpa)=}")
 
 
 #################################################################################
@@ -209,7 +210,7 @@ print("Lead          :", lead)
 print("Associates    :", associates)
 
 team = {"manager": "Alice", "lead": "Bob", "members": ["Charlie", "David"]}
-manager, lead, *members = team.items()
+manager, lead, members = team.values()
 print("Manager       :", manager)
 print("Lead          :", lead)
 print("Members       :", members)

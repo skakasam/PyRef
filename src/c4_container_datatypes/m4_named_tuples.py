@@ -151,11 +151,18 @@ extended_desk_setup = ExtendedDeskSetup(
 
 print("Extending Named Tuples Examples:")
 print(f"  extended_desk_setup: {extended_desk_setup}")
+print(f"  extended_desk_setup.monitors: {extended_desk_setup.monitors}")
+print(f"  extended_desk_setup.total_monitors: {extended_desk_setup.total_monitors}")
+print(f"  extended_desk_setup.monitor_mount: {extended_desk_setup.monitor_mount}")
 
 ###############################################################################
 # Extending Named Tuples by another Named Tuple
 ###############################################################################
-NewDeskSetup = namedtuple("NewDeskSetup", extended_desk_setup._fields + ("cooling_pad",))
-new_desk_setup = NewDeskSetup(*extended_desk_setup, cooling_pad="Cooler Master NotePal X3")
+NewDeskSetup = namedtuple(
+    "NewDeskSetup", extended_desk_setup._fields + ("cooling_pad",)
+)
+new_desk_setup = NewDeskSetup(
+    *extended_desk_setup, cooling_pad="Cooler Master NotePal X3"
+)
 print("Extending Named Tuples by another Named Tuple Examples:")
 print(f"  new_desk_setup: {new_desk_setup}")

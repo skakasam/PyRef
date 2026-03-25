@@ -25,11 +25,12 @@
 
 from types import NoneType
 
+name, age = "John", None
 
-name, age = None, None
 print(f"type(name) = {type(name)}")
-print(f"type(age) = {type(age)}")
-
-name = "John"
 print(f"name is None? {name is None}")
+print(f"isinstance(name, NoneType)? {isinstance(name, NoneType)}")
+
+print(f"type(age) = {type(age)}")
+print(f"age is None? {age is None}")
 print(f"isinstance(age, NoneType)? {isinstance(age, NoneType)}")

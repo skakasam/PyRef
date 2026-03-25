@@ -26,15 +26,15 @@ print(f"complex_value = {complex_value}")  # Prints (1+2j)
 # 6. Modulus (%)
 # 7. Exponentiation (**)
 ################################################################################
-a = 10
+a = 15
 b = 3
-print(a + b)  # Prints 13
-print(a - b)  # Prints 7
-print(a * b)  # Prints 30
-print(a / b)  # Prints 3.3333333333333335 (division always returns a float)
-print(a // b)  # Prints 3 (floor or integer division)
-print(a % b)  # Prints 1 (remainder of division)
-print(a**b)  # Prints 1000 (10 raised to the power of 3)
+print(a + b)  # Prints 18
+print(a - b)  # Prints 12
+print(a * b)  # Prints 45
+print(a / b)  # Prints 5.0 (division always returns a float)
+print(a // b)  # Prints 5 (floor or integer division)
+print(a % b)  # Prints 0 (remainder of division)
+print(a**b)  # Prints 3375 (15 raised to the power of 3)
 
 ################################################################################
 # Order of Operations - PEMDAS

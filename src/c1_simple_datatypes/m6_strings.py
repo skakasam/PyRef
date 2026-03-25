@@ -15,7 +15,9 @@ print(greeting_2)
 ###############################################################################
 # Adding escape sequences (tabs or newlines) in strings
 ###############################################################################
-print("Novus,\\Skills!")  # Prints "Novus," followed by a backslash, and finally "Skills!"
+print(
+    "Novus,\\Skills!"
+)  # Prints "Novus," followed by a backslash, and finally "Skills!"
 print("Novus,\vSkills!")  # Prints "Novus," followed by a vertical tab and "Skills!"
 print("Novus,\nSkills!")  # Prints "Novus," followed by "Skills!" on a new line
 print("Novus,\tSkills!")  # Prints "Novus," followed by a tab and "Skills!"
@@ -106,4 +108,4 @@ print(project_path[:-1])  # Prints the raw string with backslashes
 name = "Novus Skills"
 print(f"Hello, {name}!")  # Prints "Hello, Novus Skills!"
 price = 29.99
-print(f"{price=:<5.2f}")  # Prints "price=29.99"
+print(f"{price=:>7.2f}")  # Prints "price=29.99"

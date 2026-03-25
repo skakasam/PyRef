@@ -1,5 +1,7 @@
 """Python Dynamic/Duck Typing Practice"""
 
+import sys
+
 ###############################################################################
 # Python is a dynamically typed language i.e., the datatypes of variables can
 # change once it's been initialized. There is no need to declare the type of a
@@ -75,11 +77,9 @@ print(f"list_1 is list_2? {list_1 is list_2}")
 ###############################################################################
 # Getting Reference Counts
 ###############################################################################
-import sys
-
 print(f"Reference count for list_1: {sys.getrefcount(list_1)}")
 print(f"Reference count for list_2: {sys.getrefcount(list_2)}")
-print(f"Reference count for [1,2,3,4]: {sys.getrefcount([1,2,3,4])}")
+print(f"Reference count for [1,2,3,4]: {sys.getrefcount([1, 2, 3, 4])}")
 
 ###############################################################################
 # Shared References and Equality

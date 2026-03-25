@@ -51,6 +51,10 @@ def counter(start):
 
     # The decrement function is a closure too, which works similar to the
     # increment function.
+    # The nonlocal keyword is used to indicate that the count variable is not
+    # local to the increment and decrement functions, but is defined in the
+    # enclosing scope of the counter function. This allows both increment and
+    # decrement to modify the same count variable, which is shared between them.
     def decrement():
         nonlocal count
         count -= 1
@@ -59,10 +63,12 @@ def counter(start):
     return increment, decrement
 
 
-new_message, read_message = counter(10)
+new_message, read_message = counter(5)
 print(f"New message received ({new_message()} unread)")
 print(f"One message read     ({read_message()} unread)")
 print(f"New message received ({new_message()} unread)")
+print(f"One message read     ({read_message()} unread)")
+print(f"One message read     ({read_message()} unread)")
 
 ################################################################################
 # Decorators
