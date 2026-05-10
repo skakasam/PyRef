@@ -46,14 +46,14 @@ allocations_table = sa.Table(
 )
 
 
-def print_ddls(*tables):
+def print_ddls(*tables: sa.Table):
     """Prints the DDL statements for all tables."""
     for table in tables:
         print(f"{table.name} Table DDL:")
         print(str(sa.schema.CreateTable(table).compile(ENGINE)))
 
 
-def recreate_tables(*tables):
+def recreate_tables(*tables: sa.Table):
     """Drops and recreates all tables."""
     metadata.drop_all(ENGINE, tables, checkfirst=True)
     metadata.create_all(ENGINE, tables, checkfirst=True)

@@ -16,8 +16,8 @@ def join_tables(connection: Connection):
         select(
             projects_table.c.name.label("project"),
             employees_table.c.name.label("employee"),
-            employees_table.c.position.label("position"),
-            employees_table.c.salary.label("salary"),
+            employees_table.c.position,
+            employees_table.c.salary,
         )
         .select_from(
             join(

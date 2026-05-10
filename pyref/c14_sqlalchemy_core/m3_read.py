@@ -1,6 +1,6 @@
 """Reading records from the database using SQLAlchemy Core"""
 
-from sqlalchemy import Connection, CursorResult, MetaData, Table, select
+from sqlalchemy import Connection, MetaData, Table, select
 
 from pyref.common import blue, green, red
 
@@ -14,7 +14,7 @@ allocations_table = Table("allocations", metadata, autoload_with=ENGINE)
 
 def read_projects(connection: Connection):
     """Reads and prints all projects from the database."""
-    result: CursorResult = connection.execute(select(projects_table))
+    result = connection.execute(select(projects_table))
     print(red.head("Projects:"))
     for row in result.mappings():
         print(f"ID: {row['id']}, Name: {row['name']}, Description: {row['description']}")
@@ -23,7 +23,7 @@ def read_projects(connection: Connection):
 
 def read_employees(connection: Connection):
     """Reads and prints all employees from the database."""
-    result: CursorResult = connection.execute(
+    result = connection.execute(
         select(
             employees_table.c.id,
             employees_table.c.name,
@@ -39,9 +39,7 @@ def read_employees(connection: Connection):
 
 def read_allocations(connection: Connection):
     """Reads and prints all allocations from the database."""
-    result: CursorResult = connection.execute(
-        select(allocations_table).where(allocations_table.c.employee_id.in_([1, 2, 3]))
-    )
+    result = connection.execute(select(allocations_table).where(allocations_table.c.employee_id.in_([1, 2, 3])))
     print(green.head("Allocations:"))
     for row in result.mappings():
         print(f"ID: {row['id']}, Employee ID: {row['employee_id']}, Project ID: {row['project_id']}")

@@ -24,11 +24,11 @@ class _TextFormatter:
 
     def __init__(self, color: _TextColor):
         """Initializes the TextFormatter class."""
-        self._color = color
+        self._color: _TextColor = color
 
     def __call__(self, text: str, bold: bool = False, underline: bool = False) -> str:
         """Formats the text with the specified color and styles."""
-        attrs = []
+        attrs: list[str] = []
         if bold:
             attrs.append("bold")
         if underline:

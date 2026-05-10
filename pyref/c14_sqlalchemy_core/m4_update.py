@@ -1,6 +1,6 @@
 """Updating records in the database using SQLAlchemy Core"""
 
-from sqlalchemy import Connection, CursorResult, MetaData, Table, update
+from sqlalchemy import Connection, MetaData, Table, update
 
 from pyref.common import blue, green
 
@@ -15,25 +15,25 @@ def update_employees(connection: Connection):
     """Updates employee salaries based on position."""
     print(blue.bold("Commencing employee updates."))
 
-    updt1: CursorResult = connection.execute(
+    updt1 = connection.execute(
         update(employees_table).where(employees_table.c.id == 3).values(position="Architect", salary=65000.00)
     )
     print(f"{updt1.rowcount} employee rows updated successfully.")
     print("Employee with ID 3 promoted to Architect with a salary of $65,000.00.")
 
-    updt2: CursorResult = connection.execute(
+    updt2 = connection.execute(
         update(employees_table).where(employees_table.c.id == 9).values(position="Developer", salary=55000.00)
     )
     print(f"{updt2.rowcount} employee rows updated successfully.")
     print("Employee with ID 9 promoted to Developer with a salary of $55,000.00.")
 
-    updt3: CursorResult = connection.execute(
+    updt3 = connection.execute(
         update(allocations_table).where(allocations_table.c.employee_id == 3).values(project_id=2)
     )
     print(f"{updt3.rowcount} allocation rows updated successfully.")
     print("Allocation for employee with ID 3 updated to project ID 2.")
 
-    updt4: CursorResult = connection.execute(
+    updt4 = connection.execute(
         update(allocations_table).where(allocations_table.c.employee_id == 9).values(project_id=1)
     )
     print(f"{updt4.rowcount} allocation rows updated successfully.")

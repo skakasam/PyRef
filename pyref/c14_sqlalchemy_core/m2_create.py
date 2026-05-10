@@ -14,7 +14,7 @@ allocations_table = sa.Table("allocations", metadata, autoload_with=ENGINE)
 
 def insert_projects(connection: sa.Connection):
     """Inserts sample projects into the database."""
-    result: sa.CursorResult = connection.execute(
+    result = connection.execute(
         sa.insert(projects_table),
         [
             {
@@ -34,7 +34,7 @@ def insert_projects(connection: sa.Connection):
 
 def insert_employees(connection: sa.Connection):
     """Inserts sample employees into the database."""
-    result: sa.CursorResult = connection.execute(
+    result = connection.execute(
         sa.insert(employees_table),
         [
             {
@@ -124,7 +124,7 @@ def insert_employees(connection: sa.Connection):
 
 def insert_allocations(connection: sa.Connection):
     """Inserts sample allocations into the database."""
-    result: sa.CursorResult = connection.execute(
+    result = connection.execute(
         sa.insert(allocations_table),
         [
             {"id": 1, "employee_id": 1, "project_id": 1},
@@ -149,7 +149,7 @@ def main():
             insert_projects(connection)
             insert_employees(connection)
             insert_allocations(connection)
-        # auto-commits on success, auto-rollbacks on exception
+        # transaction auto-commits on success (or) auto-rollbacks on exception
     # no need for explicit connection.commit()
 
 
